@@ -5,6 +5,8 @@
   - Ela deve ter um escopo global.
 */
 
+const name = 'Felipe';
+
 /*
   02
 
@@ -18,6 +20,13 @@
     defined" será exibido no console;
   - Você sabe por que isso aconteceu?
 */
+
+const myAge = () =>{
+  let idade = 23;
+  return idade;
+}
+
+console.log(myAge())
 
 /*
   03
@@ -37,11 +46,37 @@
       "O NOME_DO_CARRO está disponível nas cores COR_01, COR_02 e COR_03".
 */
 
+const car = {
+  name: 'civic',
+  brand: 'Honda',
+  colors: ['branco', 'preto', 'prata'],
+
+  isRunning (boolean){
+    return console.log(boolean);
+  },
+
+  run(){
+    console.log(`O ${this.name} está em movimento`);
+  },
+
+  stop(){
+    console.log(`O ${this.name} está parado`);
+  },
+
+  getColorMessage(){
+    console.log(`O  ${this.name} está disponível nas cores  ${this.colors[0]}, ${this.colors[1]} e ${this.colors[2]}`)
+  }
+
+}
+
 /*
   04
 
   - Faça o carro andar e exiba no console se ele realmente está em movimento.
 */
+
+// car.isRunning(true);
+// car.run();
 
 /*
   05
@@ -49,12 +84,15 @@
   - Faça o carro parar e exiba no console se ele realmente está parado.
 */
 
+// car.isRunning(false);
+// car.stop();
+
 /*
   06
 
   - Exiba, no console, a mensagem com as cores do carro.
 */
-
+// car.getColorMessage()
 /*
   07
 
