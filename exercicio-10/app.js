@@ -10,6 +10,18 @@
   - Exiba o objeto no console.
 */
 
+const cat = {
+  name: 'Ninha',
+  age: 1,
+  color: 'rajada',
+  bestFriends: ['Lily', 'gata mãe'],
+  sound: ()=>{
+   return 'miau miau'
+  }
+}
+
+// console.log(cat);
+
 /*
   02
 
@@ -19,11 +31,15 @@
   Até aqui, o objeto "cat" possui as seguintes propriedades e valores: "name", que recebeu "X", "age", que recebeu "X", "color", que recebeu "X", "bestFriends", que recebeu um array com os itens "X" e "X", e "sound", que recebeu uma função que retorna "X".
 */
 
+// console.log(`Até aqui, o objeto "cat" possui as seguintes propriedades e valores: "name", que recebeu "${cat.name}", "age", que recebeu "${cat.age}", "color", que recebeu "${cat.color}", "bestFriends", que recebeu um array com os itens "${cat.bestFriends[0]}" e "${cat.bestFriends[1]}", e "sound", que recebeu uma função que retorna "${cat.sound()}".`)
+
 /*
   03
 
   - Adicione 2 anos à idade do gato e exiba a idade atualizada no console.
 */
+
+// console.log(cat.age + 2);
 
 /*
   04
@@ -32,6 +48,14 @@
   - Exiba o array de amigos no console para verificar se o novo amigo(a) foi  
     adicionado.
 */
+
+const addCatFriend = (string) =>{
+  return cat.bestFriends.push(string);
+}
+
+addCatFriend('Felipe');
+
+// console.log(cat.bestFriends);
 
 /*
   05
@@ -42,6 +66,8 @@
     colchetes.
 */
 
+
+
 /*
   06
 
@@ -49,6 +75,12 @@
     parâmetro é um objeto;
   - Utilize a função para exibir no console se "cat" é um objeto.
 */
+
+const isObject = (valor) =>{
+  return typeof valor ==='object';
+}
+
+console.log(isObject(cat));
 
 /*
   07
