@@ -24,7 +24,8 @@ console.log(lis);
     e exiba-o no console;
 */
 
-
+const h2 = document.querySelector('h2');
+console.log(h2.parentElement);
 
 /*
   03
@@ -32,6 +33,8 @@ console.log(lis);
   - Descubra quem é o próximo elemento irmão do h1 e exiba-o no console;
 */
 
+const h1 = document.querySelector('h1');
+console.log(h1.nextElementSibling);
 
 
 /*
@@ -40,7 +43,7 @@ console.log(lis);
   - Descubra quem é o irmão anterior da ul e exiba-o no console;
 */
 
-
+console.log(ul.previousElementSibling);
 
 /*
   05
@@ -49,7 +52,15 @@ console.log(lis);
     exibida no console.
 */
 
+const showClicked = (event)=>{
+  console.log(event.target);
+}
 
+const addClickEvent = li =>{
+  li.addEventListener('click', showClicked)
+}
+
+lis.forEach(addClickEvent);
 
 /*
   06
@@ -69,9 +80,27 @@ const videos = [{
   length: '00:02:55'
 }]
 
+const button = document.querySelector('button');
+
+const handleClickedButton = () =>{
+  videos.forEach(video =>{
+    ul.innerHTML += `<li>${video.name}</li>`
+  })
+}
+
+button.addEventListener('click', handleClickedButton);
+
+
 /*
   07
 
   - Se um clique no h1 acontecer, faça com que todos os elementos dentro do body 
     sejam removidos.
 */
+
+
+const body = document.body;
+
+h1.addEventListener('click', ()=>{
+  body.innerHTML = ' ';
+})
